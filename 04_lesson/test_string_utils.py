@@ -48,7 +48,7 @@ def test_delete_symbol_positive(string, symbol, expected):
     assert string_utils.delete_symbol(string, symbol) == expected
 
 
-@pytest.mark.parametrize("string,        symbol, expected",
+@pytest.mark.parametrize("string, symbol, expected",
                          [("Sky", "P", "Sky"), ("", "a", ""),
                           ("abc", "d", "abc")])
 def test_delete_symbol_negative(string, symbol, expected):
