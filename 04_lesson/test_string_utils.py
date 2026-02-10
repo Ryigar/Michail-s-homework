@@ -42,12 +42,12 @@ def test_contains_negative(string, symbol):
 
 
 @pytest.mark.parametrize("string, symbol, expected", [
-    ("SkyPro", "kyP","Sro"), ("ошибка", "ш", "оибка"), ("12367", "236","17")])
+    ("SkyPro", "kyP", "Sro"), ("ошибка", "ш", "оибка"), ("12367", "236", "17")])
 def test_delete_symbol_positive(string, symbol, expected):
     assert string_utils.delete_symbol(string, symbol) == expected
 
 
 @pytest.mark.parametrize("string, symbol, expected", [
-    ("Sky", "P","Sky"), ("", "a", ""), ("abc", "d", "abc")])
+    ("Sky", "P", "Sky"), ("", "a", ""), ("abc", "d", "abc")])
 def test_delete_symbol_negative(string, symbol, expected):
     assert string_utils.delete_symbol(string, symbol) == expected
